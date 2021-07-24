@@ -1,17 +1,17 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "ontherocksoftware/laravel-red-amber-green",
+    "description": "Easy interface to work with your https://red-amber.green monitrors in your Laravel applications",
     "keywords": [
-        ":vendor_name",
+        "ontherocksoftware",
         "laravel",
-        "package_slug"
+        "laravel-red-amber-green"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/ontherocksoftware/laravel-red-amber-green",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Heinz Seldte",
+            "email": "heinz@otrsw.com",
             "role": "Developer"
         }
     ],
@@ -30,18 +30,18 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Ontherocksoftware\\LaravelRedAmberGreen\\": "src",
+            "Ontherocksoftware\\LaravelRedAmberGreen\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Ontherocksoftware\\LaravelRedAmberGreen\\Tests\\": "tests"
         }
     },
     "scripts": {
         "psalm": "vendor/bin/psalm",
-        "test": "./vendor/bin/testbench package:test --parallel --no-coverage",
+        "test": "vendor/bin/testbench package:test --parallel --no-coverage",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
     "config": {
@@ -50,10 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Ontherocksoftware\\LaravelRedAmberGreen\\LaravelRedAmberGreenServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "LaravelRedAmberGreen": "Ontherocksoftware\\LaravelRedAmberGreen\\LaravelRedAmberGreenFacade"
             }
         }
     },
