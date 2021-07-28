@@ -2,9 +2,9 @@
 
 namespace Ontherocksoftware\LaravelRedAmberGreen;
 
+use Ontherocksoftware\LaravelRedAmberGreen\Commands\LaravelRedAmberGreenCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Ontherocksoftware\LaravelRedAmberGreen\Commands\LaravelRedAmberGreenCommand;
 
 class LaravelRedAmberGreenServiceProvider extends PackageServiceProvider
 {
