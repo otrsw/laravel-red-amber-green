@@ -2,7 +2,6 @@
 
 namespace Ontherocksoftware\LaravelRedAmberGreen\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Ontherocksoftware\LaravelRedAmberGreen\LaravelRedAmberGreenServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -12,9 +11,6 @@ class TestCase extends Orchestra
     {
         parent::setUp();
 
-        Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Ontherocksoftware\\LaravelRedAmberGreen\\Database\\Factories\\'.class_basename($modelName).'Factory'
-        );
     }
 
     protected function getPackageProviders($app)
