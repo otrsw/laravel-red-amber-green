@@ -17,9 +17,6 @@ class LaravelRedAmberGreenServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-red-amber-green')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel-red-amber-green_table')
-            ->hasCommand(LaravelRedAmberGreenCommand::class);
+            ->hasConfigFile();
     }
 }
