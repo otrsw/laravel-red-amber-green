@@ -1,14 +1,13 @@
 <?php
 
 use Illuminate\Support\Arr;
+use Ontherocksoftware\LaravelRedAmberGreen\LaravelRedAmberGreen;
 use Ontherocksoftware\LaravelRedAmberGreen\RagException;
 use Ontherocksoftware\LaravelRedAmberGreen\Tests\TestCase;
-use Ontherocksoftware\LaravelRedAmberGreen\LaravelRedAmberGreen;
-
 
 class MonitorInterfaceTest extends TestCase
 {
-    const TEST_TOKEN = 'wTO6fn3OiA8kNIxhSDJMB6NHwzfZoFda66IcSYGX';
+    public const TEST_TOKEN = 'wTO6fn3OiA8kNIxhSDJMB6NHwzfZoFda66IcSYGX';
 
     public function can_list_monitors()
     {
@@ -78,7 +77,7 @@ class MonitorInterfaceTest extends TestCase
         } catch (RagException $rag) {
             $error = $rag->getMessage();
         }
-        
+
         $this->assertEquals($error, 'Unauthenticated.');
     }
 }

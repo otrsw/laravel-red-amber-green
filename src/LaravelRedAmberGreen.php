@@ -2,23 +2,20 @@
 
 namespace Ontherocksoftware\LaravelRedAmberGreen;
 
-use GuzzleHttp\Client;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Http;
-use Ontherocksoftware\LaravelRedAmberGreen\RagException;
 
 class LaravelRedAmberGreen
 {
-    const BASE_URL = "https://test.red-amber.green/api/";
-    const GUZZLE_OPTIONS = [
-        'verify' => false
+    public const BASE_URL = "https://test.red-amber.green/api/";
+    public const GUZZLE_OPTIONS = [
+        'verify' => false,
     ];
-    
 
     private static function get($url)
     {
         $token = config('rag-laravel.token');
-        
+
         return Http::withOptions(static::GUZZLE_OPTIONS)->withHeaders(['Accept' => 'application/json'])->withToken($token)->get(static::BASE_URL . $url);
     }
 
@@ -89,5 +86,4 @@ class LaravelRedAmberGreen
 
         throw new RagException(Arr::get($response->json(), 'message', 'Unknown error please check your config'));
     }
-
 }
